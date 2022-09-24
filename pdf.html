@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+console.log(urlParams.get('link'))
+
+
+    </script>
+
+<iframe id="vid" src="" style="height: 100vh; width: 80vw;" frameborder="0"></iframe>
+
+    
+  <script>
+    document.getElementById('vid').setAttribute('src',"https://docs.google.com/gview?url="+urlParams.get('link')+"&embedded=true")
+  </script>
+</body>
+</html>

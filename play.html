@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Viewer</title>
+</head>
+<body>
+    <script>
+        const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+console.log(urlParams.get('link'))
+
+
+    </script>
+
+<video src="movie.ogg" id="vid" controls>
+    Your browser does not support the video tag.
+  </video>
+    
+  <script>
+    document.getElementById('vid').setAttribute('src',urlParams.get('link'))
+  </script>
+</body>
+</html>
