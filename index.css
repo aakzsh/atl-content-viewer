@@ -1,0 +1,72 @@
+.parent{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+html, body{
+    font-family: sans-serif;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.652);
+    color: white;
+    height: 100vh;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+}
+
+p{
+    font-size: 1.5rem;
+    
+}
+
+input{
+    width: 20rem;
+height: 2.5rem;
+background-color: transparent;
+border: 1px solid white;
+border-radius: 0.3rem;
+padding-left: 0.5rem;
+color: white;
+}
+
+button{
+    height: 2.5rem;
+    width: 6rem;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    background-color: rgb(113, 198, 113);
+    border: 1px solid rgb(113, 198, 113) ;
+}
+
+button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.inputbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#vid{
+    max-height: 80vh;
+    max-width: 80vw;
+}
+
+.one{
+width: 10rem;
+}

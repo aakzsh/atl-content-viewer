@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Content Viewer | Image</title>
 </head>
 <body>
     <script>
@@ -16,8 +17,8 @@ console.log(urlParams.get('link'))
 
     </script>
 
-<img src="" id="vid" alt="">
-    
+<center><img src="" id="vid" alt=""><br>
+  <button class="one" onclick="window.location.replace('index.html')">Go to Start</button> </center>
   <script>
     document.getElementById('vid').setAttribute('src',urlParams.get('link'))
   </script>

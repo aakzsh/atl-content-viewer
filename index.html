@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="View the content directly without having to download it">
+    <link rel="stylesheet" href="index.css">
     <title>ATL VIDEO VIEWER</title>
 </head>
 <body>
@@ -19,15 +20,25 @@
              window.location.href='pdf.html?link='+document.getElementById('textfield3').value
         }
     </script>
+ <div class="parent">
+    <img src="https://aim.gov.in/ATL-Tinkerpreneur/assets/img/logo.png" width="300rem" alt="">
+    <br><br><br><br>
     <p>View the content directly without having to download it</p>
-    <input type="text" placeholder="Enter Video Link" id="textfield1">
+    <div class="inputbox">
+        <input type="text" placeholder="Enter Video Link" id="textfield1">
     <button onclick="check1()">submit</button>
+    </div>
     <br>
-    <input type="text" placeholder="Enter Image Link" id="textfield2">
+    <div class="inputbox">
+        <input type="text" placeholder="Enter Image Link" id="textfield2">
     <button onclick="check2()">submit</button>
+    </div>
     <br>
+   <div class="inputbox">
     <input type="text" placeholder="Enter PDF Link" id="textfield3">
     <button onclick="check3()">submit</button>
+   </div>
+ </div>
 </body>
 </html>
 
