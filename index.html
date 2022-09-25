@@ -9,36 +9,47 @@
     <title>ATL VIDEO VIEWER</title>
 </head>
 <body>
-    <script>
-        function check1(){
-             window.location.href='play.html?link='+document.getElementById('textfield1').value
-        }
-        function check2(){
-             window.location.href='image.html?link='+document.getElementById('textfield2').value
-        }
-        function check3(){
-             window.location.href='pdf.html?link='+document.getElementById('textfield3').value
-        }
-    </script>
+    
  <div class="parent">
     <img src="https://aim.gov.in/ATL-Tinkerpreneur/assets/img/logo.png" width="300rem" alt="">
     <br><br><br><br>
     <p>View the content directly without having to download it</p>
     <div class="inputbox">
-        <input type="text" placeholder="Enter Video Link" id="textfield1">
+        <input type="text" class="content-text" placeholder="Enter Content Link" id="textfield1">
     <button onclick="check1()">submit</button>
     </div>
-    <br>
-    <div class="inputbox">
-        <input type="text" placeholder="Enter Image Link" id="textfield2">
-    <button onclick="check2()">submit</button>
-    </div>
-    <br>
-   <div class="inputbox">
-    <input type="text" placeholder="Enter PDF Link" id="textfield3">
-    <button onclick="check3()">submit</button>
-   </div>
  </div>
+ <script>
+    const contentText = document.querySelector('.content-text')
+    const image = ['jpg', 'png', 'jpeg']
+    const  pdf = ['pdf']
+    const video = ['mp4', 'mov']
+    window.addEventListener('onload', () => {
+        contentText.value = ""
+    })
+    function check1(){
+
+        let linkExtensionArr = contentText.value.split(".")
+        let linkExtension = linkExtensionArr[linkExtensionArr.length - 1]
+        
+        let linkType;
+        if(image.includes(linkExtension)){
+            linkType = image
+            window.location.href='image.html?link='+contentText.value
+        } else if( video.includes(linkExtension)){
+            linkType = video
+            window.location.href='play.html?link='+contentText.value
+        } else if(pdf.includes(linkExtension)){
+            linkType = pdf
+            window.location.href='pdf.html?link='+contentText.value
+        } else {
+            alert('not a valid content type')
+        }
+         
+         
+    }
+      
+</script>
 </body>
 </html>
 
